@@ -1,15 +1,64 @@
+// Подключение шрифтов
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:wght@400;700;900&family=Roboto:wght@100;300;400;900&display=swap');
-
 
 // Файл обнуляющих стилей
 @import "nullstyle.scss";
+//================================================================================================
+
+//Шаблоны
+
+//Шаблон для ширины контентной части
+%content_wrapper {
+			max-width: 941px;
+			margin:0 auto;
+}
+//Шаблон заголовка
+%bigheaders {
+		font-family: 'Playfair Display',serif;
+		text-transform: uppercase;
+		font-size: 22px;
+		line-height: 1.2;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+}
+// Шаблон голубой кнопки
+%blue_link {
+	display: inline-block;
+	font-family: 'Hammersmith One', sans-serif;
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: 400;
+	color: #00e0d0;
+	text-transform:uppercase;
+	height: 40px;
+	border: 1px solid #00e0d0;
+}
+//===============================================================================================
+
+//Миксины
+
+
+// Миксин для заголовка
+@mixin header_styling($header_color){
+	@extend %bigheaders;
+	color: $header_color;
+}
+// Миксин для кнопки 
+@mixin link_styling($link_width){
+	@extend %blue_link;
+	width:$link_width;
+}
+
+//=============================================================================================
+
+//Стили страницы
+
 
 header {
 		background: url('../../img/layers.png') no-repeat, url('../../img/put_your_image_here_51.png') no-repeat;
 		
 		.heading{
-			max-width: 941px;
-			margin:0 auto;
+			@extend %content_wrapper;
 			display: flex;
 			justify-content: space-between;
 
@@ -93,24 +142,17 @@ header {
 				margin:30px 0 0 0;
 			}
 			a{
-				display: inline-block;
-				font-family: 'Hammersmith One', sans-serif;
-				font-size: 16px;
-				line-height: 40px;
-				font-weight: 400;
-				color: #00e0d0;
-				text-transform:uppercase;
-				width: 120px;
+				@include link_styling(120px);
 				margin:50px 0 0 0;
-				height: 40px;
-				border: 1px solid #00e0d0;
+				
 			}
 		}
 		.triggers {
 			width:55px;
-			margin:127px auto;
+			margin:127px auto 0;
 			display: flex;
 			justify-content: space-between;
+			padding: 0 0 70px 0;
 
 			span {
 				display: block;
@@ -125,3 +167,23 @@ header {
 		}
 	}
 
+#about {
+	background: #ffffff;
+	.company_story{
+		@extend %content_wrapper;
+	}
+	h2 {
+		@include header_styling(#413d4b);
+
+	}
+	p {
+		opacity: 0.74;
+		font-family: Roboto;
+		font-size: 14px;
+		line-height: 22px;
+		font-weight: 300;
+		letter-spacing: 0.03em;
+		color: #413d4b;
+		margin: 28px 0 0 0;
+	}
+}
