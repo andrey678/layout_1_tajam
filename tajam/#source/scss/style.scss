@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:wght@400;700;900&family=Roboto:wght@100;300;400;900&display=swap');
+
+
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+header {
+		background: url('../../img/layers.png') no-repeat, url('../../img/put_your_image_here_51.png') no-repeat;
+		
+		.heading{
+			max-width: 941px;
+			margin:0 auto;
+			display: flex;
+			justify-content: space-between;
+
+			.logo{
+				
+				h1 {
+					background-image: linear-gradient(90.0deg, #00e0d0 0%, #4aa3cc 100%);
+					font-family: Roboto;
+					font-size: 30px;
+					line-height: 1.2;
+					margin:26px 0 0 0;
+					font-weight: 100;
+					color: transparent;
+					background-clip: text;
+					position:relative;
+					padding: 0 0 0 55px;
+					
+					&:before {
+						content: '';
+						background: url('../../img/Icons/vector_smart_object_47.png') 0 0 no-repeat;
+						width: 44px;
+						height: 50px;
+						
+						top: 0;
+						left: 0;
+						position: absolute;
+					}
+				}
+			}
+			nav {
+				margin: 36px 0 0 0;
+				width:526px;
+				ul{
+					display: flex;
+					justify-content: space-between;
+					font-family: Roboto;
+					font-size: 13px;
+					line-height: 1.2;
+					font-weight: 900;
+					letter-spacing: 0.025em;
+					text-transform: uppercase;
+					li{
+						a {
+							color:#ffffff;
+						}
+					&:first-child a{
+						color:#00e0d0;
+					};
+					} 
+				}
+			}
+		}
+		.middle_content {
+			text-align: center;
+			max-width: 771px;
+			margin:0 auto;
+			h2 {
+				font-family: 'Playfair Display', serif;
+				font-size: 32px;
+				line-height: 1.2;
+				font-weight: 900;
+				letter-spacing: 0.01em;
+				color: #ffffff;
+				text-transform:capitalize;
+				margin: 173px 0 0 0;
+			}
+			span {
+				display: inline-block;
+				width: 50px;
+				height: 1px;
+				background-color: #00e0d0;
+				margin: 21px 0 0 0;
+			}
+			p{
+				font-family: Roboto;
+				font-size: 14px;
+				line-height: 24px;
+				font-weight: 300;
+				letter-spacing: 0.05em;
+				color: #ffffff;
+				margin:30px 0 0 0;
+			}
+			a{
+				display: inline-block;
+				font-family: 'Hammersmith One', sans-serif;
+				font-size: 16px;
+				line-height: 40px;
+				font-weight: 400;
+				color: #00e0d0;
+				text-transform:uppercase;
+				width: 120px;
+				margin:50px 0 0 0;
+				height: 40px;
+				border: 1px solid #00e0d0;
+			}
+		}
+		.triggers {
+			width:55px;
+			margin:127px auto;
+			display: flex;
+			justify-content: space-between;
+
+			span {
+				display: block;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				border: 1px solid #c2c2c2;
+				&:first-child{
+					background-color:#00e0d0;
+				}
+			}
+		}
+	}
+

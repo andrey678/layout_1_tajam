@@ -1,0 +1,172 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:wght@400;700;900&family=Roboto:wght@100;300;400;900&display=swap");
+/*Обнуление некоторых стандартных стилей CSS браузера*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+/*--------------------------------------------------*/
+header {
+  background: url("../../img/layers.png") no-repeat, url("../../img/put_your_image_here_51.png") no-repeat; }
+  header .heading {
+    max-width: 941px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    header .heading .logo h1 {
+      background-image: -webkit-gradient(linear, left top, right top, from(#00e0d0), to(#4aa3cc));
+      background-image: -webkit-linear-gradient(left, #00e0d0 0%, #4aa3cc 100%);
+      background-image: -o-linear-gradient(left, #00e0d0 0%, #4aa3cc 100%);
+      background-image: linear-gradient(90deg, #00e0d0 0%, #4aa3cc 100%);
+      font-family: Roboto;
+      font-size: 30px;
+      line-height: 1.2;
+      margin: 26px 0 0 0;
+      font-weight: 100;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      position: relative;
+      padding: 0 0 0 55px; }
+      header .heading .logo h1:before {
+        content: '';
+        background: url("../../img/Icons/vector_smart_object_47.png") 0 0 no-repeat;
+        width: 44px;
+        height: 50px;
+        top: 0;
+        left: 0;
+        position: absolute; }
+    header .heading nav {
+      margin: 36px 0 0 0;
+      width: 526px; }
+      header .heading nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        font-family: Roboto;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 900;
+        letter-spacing: 0.025em;
+        text-transform: uppercase; }
+        header .heading nav ul li a {
+          color: #ffffff; }
+        header .heading nav ul li:first-child a {
+          color: #00e0d0; }
+  header .middle_content {
+    text-align: center;
+    max-width: 771px;
+    margin: 0 auto; }
+    header .middle_content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin: 173px 0 0 0; }
+    header .middle_content span {
+      display: inline-block;
+      width: 50px;
+      height: 1px;
+      background-color: #00e0d0;
+      margin: 21px 0 0 0; }
+    header .middle_content p {
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      margin: 30px 0 0 0; }
+    header .middle_content a {
+      display: inline-block;
+      font-family: 'Hammersmith One', sans-serif;
+      font-size: 16px;
+      line-height: 40px;
+      font-weight: 400;
+      color: #00e0d0;
+      text-transform: uppercase;
+      width: 120px;
+      margin: 50px 0 0 0;
+      height: 40px;
+      border: 1px solid #00e0d0; }
+  header .triggers {
+    width: 55px;
+    margin: 127px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    header .triggers span {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #c2c2c2; }
+      header .triggers span:first-child {
+        background-color: #00e0d0; }
