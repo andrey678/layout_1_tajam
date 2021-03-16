@@ -32,6 +32,7 @@
 	text-transform:uppercase;
 	height: 40px;
 	border: 1px solid #00e0d0;
+	text-align: center;
 }
 //===============================================================================================
 
@@ -53,9 +54,9 @@
 
 //Стили страницы
 
-
+// Главная страница
 header {
-		background: url('../../img/layers.png') no-repeat, url('../../img/put_your_image_here_51.png') no-repeat;
+		background: url('../../img/purple_frontlayer1.png') no-repeat, url('../../img/forest_backlayer.png') no-repeat;
 		
 		.heading{
 			@extend %content_wrapper;
@@ -66,7 +67,7 @@ header {
 				
 				h1 {
 					background-image: linear-gradient(90.0deg, #00e0d0 0%, #4aa3cc 100%);
-					font-family: Roboto;
+					font-family: 'Roboto', sans-serif;
 					font-size: 30px;
 					line-height: 1.2;
 					margin:26px 0 0 0;
@@ -78,7 +79,7 @@ header {
 					
 					&:before {
 						content: '';
-						background: url('../../img/Icons/vector_smart_object_47.png') 0 0 no-repeat;
+						background: url('../../img/Icons/logo.png') 0 0 no-repeat;
 						width: 44px;
 						height: 50px;
 						
@@ -94,7 +95,7 @@ header {
 				ul{
 					display: flex;
 					justify-content: space-between;
-					font-family: Roboto;
+					font-family: 'Roboto', sans-serif;
 					font-size: 13px;
 					line-height: 1.2;
 					font-weight: 900;
@@ -133,7 +134,7 @@ header {
 				margin: 21px 0 0 0;
 			}
 			p{
-				font-family: Roboto;
+				font-family: 'Roboto', sans-serif;
 				font-size: 14px;
 				line-height: 24px;
 				font-weight: 300;
@@ -167,23 +168,216 @@ header {
 		}
 	}
 
+// О компании
 #about {
 	background: #ffffff;
 	.company_story{
 		@extend %content_wrapper;
-	}
+		
+	.story_box{
+		
+		position: relative;
+		padding: 71px 0 0 403px;
+		height: 296px;
+		margin: 0 0 111px 0;
+
 	h2 {
 		@include header_styling(#413d4b);
+		
 
 	}
 	p {
 		opacity: 0.74;
-		font-family: Roboto;
+		font-family: 'Roboto', sans-serif;
 		font-size: 14px;
 		line-height: 22px;
 		font-weight: 300;
 		letter-spacing: 0.03em;
 		color: #413d4b;
 		margin: 28px 0 0 0;
+		&:nth-child(3){
+			margin:10px 0 0 0;
+		}
+	}
+	a {
+		@include link_styling(120px);
+		margin:31px 0 0 0;
+
+
+
+		}
+		&:before{
+			content: '';
+			display: inline-block;
+			background: url('../../img/logo-two.png') no-repeat;
+			position:absolute;
+			width: 110%;
+			height: 110%;
+			top: 70px;
+			left: 68px;
+			
+			
+			}
+		}
+	}
+}
+
+// Для видео презентации
+
+.video_story{
+	background:url('../../img/frontlayer_ourstory.png') 0 0 no-repeat,url('../../img/backlayer_our_story.png')0 0 no-repeat;
+		
+	.play_wrapper{
+		@extend %content_wrapper;
+		text-align: center;
+		padding:202px 392px;
+
+		a{
+			font-family: 'Roboto', sans-serif;
+			font-size: 16px;
+			line-height: 1.2;
+			font-weight: 900;
+			letter-spacing: 0.05em;
+			color: #ffffff;
+			text-transform: uppercase;
+			white-space: nowrap;
+			display: block;
+
+
+			&:before{
+				display: block;
+				content:'';
+				background:url('../../img/Icons/play1.png') no-repeat, url('../../img/Icons/play2.png')35px 27px no-repeat;
+				width: 100px;
+				height: 100px;
+				margin:0 28px 34px 28px;
+			}
+		}	
+	}
+}
+
+// Компетенции
+#expertise {
+	background: #fff;
+	padding:72px 0 101px 0;
+	.expertise_wraper{
+		@extend %content_wrapper;
+		.top_content_expertise{
+			text-align:center;
+				h2{
+					@include header_styling(#413d4b);
+					margin: 0 0 16px 0;
+				}
+				p{
+					opacity: 0.74;
+					font-family: 'Playfair Display', serif;
+					font-size: 14px;
+					line-height: 1.2;
+					font-weight: 400;
+					letter-spacing: 0.075em;
+					color: #2f2d35;
+				}
+				span{
+					display: inline-block;
+					width: 50px;
+					height: 2px;
+					opacity: 0.3;
+					background-color: #413d4b;
+					margin: 18px 0 0 0;
+					}
+		}
+		.main_content_expertise{
+
+			display:grid;
+			grid-template-columns: repeat(3, 254px);
+			grid-auto-rows: 178px;
+			grid-column-gap: 66px;
+			grid-row-gap: 79px;
+			justify-items: center; 
+			div{
+				text-align:center;
+			}
+			h2{
+				font-family: 'Roboto', sans-serif;
+				font-size: 14px;
+				line-height: 1.2;
+				font-weight: 900;
+				letter-spacing: 0.05em;
+				color: #413d4b;
+				text-transform: uppercase;
+				margin:0 0 25px 0;
+			}
+			p{
+				opacity: 0.74;
+				font-family: 'Roboto', sans-serif;
+				font-size: 14px;
+				line-height: 22px;
+				font-weight: 300;
+				letter-spacing: 0.05em;
+				color: #333333;
+			}
+			.tile_web_dev{
+				
+				h2:before{
+					content:'';
+					background: url('../../img/Icons/expertise_icon_web.png');
+					display:block;
+					width: 49px;
+					height: 50px;
+					margin:0 102.5px 35px 102.5px;
+				}
+			}
+			.tile_identity{
+				h2:before{
+					content:'';
+					background: url('../../img/Icons/expertise_icon_branding.png');
+					display: block;
+					width: 50px;
+					height: 42px;
+					margin:4px 102px 39px 102px;
+
+				}
+			}
+			.tile_mobile{
+				h2:before{
+					content:'';
+					background: url('../../img/Icons/expertise_icon_mobile.png');
+					display: block;
+					width: 28px;
+					height: 50px;
+					margin:0 113px 35px 113px;
+				}
+			}
+			.tile_seo{
+				h2:before{
+					content:'';
+					background: url('../../img/Icons/expertise_icon_seo.png');
+					display: block;
+					width: 50px;
+					height: 50px;
+					margin:0 102px 35px 102px;
+				}
+			}
+			.tile_gamedev{
+				h2:before{
+					content:'';
+					background: url('../../img/Icons/expertise_icon_gamedev.png');
+					display: block;
+					width: 41px;
+					height: 50px;
+					margin:0 106.5px 35px 106.5px;
+				}
+			}
+			.tile_mwl{
+				h2:before{
+					content:'';
+					background: url('../../img/Icons/expertise_icon_mwl.png');
+					display: block;
+					width: 50px;
+					height: 46px;
+					margin:0 102px 39px 102px;
+				}
+			}
+		}
 	}
 }
