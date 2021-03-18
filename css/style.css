@@ -836,6 +836,13 @@ footer {
               background: url("../img/Icons/youtube_icon.png") 8px 10px no-repeat; }
               footer .footer_wrapper .subscribe .social ul li:last-child:hover {
                 background: url("../img/Icons/youtube_icon.png") 8px 10px no-repeat, #ff0000; }
+                footer .footer_wrapper .subscribe .social ul li a {
+                    display: block;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    border: 1px solid transparent;
+                    background: transparent; }
       footer .footer_wrapper .subscribe p {
         font-family: 'Roboto'sans-serif;
         font-size: 14px;
